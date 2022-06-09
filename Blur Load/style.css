@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Ubuntu", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+/* background-image */
+
+.bg {
+  background: url(./Assets/Cloud.jpg);
+  background-size: cover;
+  z-index: -1;
+
+  position: absolute;
+  top: -30px;
+  left: -30px;
+  width: calc(100vw + 60px);
+  height: calc(100vh + 60px);
+  filter: blur(0px);
+}
+
+.loading-text {
+  color: rgb(148, 22, 22);
+  font-size: 50px;
+}
+
+/* Under-Work --- opacity n blur not working */
+
+.text {
+  font-size: 50px;
+  background: linear-gradient(45deg, black, yellow, green);
+  color: black;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  margin: 50px auto;
+  filter: blur(0px);
+}

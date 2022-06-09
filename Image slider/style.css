@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  /* ui gradients - rastafari */
+
+  background: linear-gradient(45deg, #156302, #b0a703, #2c5364);
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  width: 90vw;
+}
+
+/* text on image */
+
+.slideText {
+  font-style: italic;
+
+  height: fit-content;
+  align-self: center;
+  font-size: 1em;
+  font-weight: bold;
+  background: linear-gradient(166deg, #7373cd, #fdfd03, #7676eb, transparent);
+  color: black;
+}
+
+/* panel  */
+
+.panel {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80vh;
+  border-radius: 50px;
+  color: #fff;
+  cursor: pointer;
+  flex: 0.5;
+  /* all panels equal width     */
+
+  margin: 10px;
+  position: relative;
+  /* transition on flex property */
+  transition: flex 0.7s ease-in;
+}
+
+/* image-desc */
+
+.panel h3 {
+  font-size: 24px;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  margin: 0;
+  opacity: 0; /* content invisible before click*/
+}
+
+.panel.active {
+  flex: 5;
+}
+
+.panel.active h3 {
+  opacity: 1;
+
+  transition: opacity 0.5s ease-in 0.4s;
+}
+
+/* media queries */
+
+@media (max-width: 480px) {
+  .container {
+    width: 100vw;
+  }
+  .panel.active h3 {
+    font-size: 0.7rem;
+    position: absolute;
+    bottom: 20px;
+    left: 10px;
+  }
+
+  .panel:nth-of-type(6),
+  .panel:nth-of-type(7) {
+    display: none;
+  }
+}
